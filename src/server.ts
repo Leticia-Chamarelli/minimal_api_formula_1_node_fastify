@@ -15,15 +15,33 @@ const teams = [
     {id: 10, name: "Williams", base: "Grove, United Kingdom"}
 ];
 
+const drivers = [
+    {id: 1, name: "Max Verstappen", team: "Red Bull Racing"},
+    {id: 2, name: "Lewis Hamilton", team: "Mercedes"},
+    {id: 3, name: "Charles Leclerc", team: "Ferrari"},
+    {id: 4, name: "Lando Norris", team: "McLaren"},
+    {id: 5, name: "Sergio Pérez", team: "Red Bull Racing"},
+    {id: 6, name: "Valtteri Bottas", team: "Alfa Romeo"},
+    {id: 7, name: "Daniel Ricciardo", team: "AlphaTauri"},
+    {id: 8, name: "Sebastian Vettel", team: "Aston Martin"},
+    {id: 9, name: "Fernando Alonso", team: "Alpine"},
+    {id: 10, name: "Kimi Räikkönen", team: "Alfa Romeo"},
+    {id: 11, name: "Pierre Gasly", team: "Alpine"},
+    {id: 12, name: "Esteban Ocon", team: "Alpine"},
+    {id: 13, name: "Nicholas Latifi", team: "Williams"},
+    {id: 14, name: "George Russell", team: "Mercedes"},
+    {id: 15, name: "Mick Schumacher", team: "Haas"},
+    {id: 16, name: "Nicholas Latifi", team: "Williams"}
+];
 
 server.get("/teams", async(request, response)=>{
     response.type("application/json").code(200)
-    return [];
+    return {teams};
 });
 
 server.get("/drivers", async(request, response)=>{
     response.type("application/json").code(200)
-    return [{id: 1, name: "Max Verstappen", team: "Red Bull Racing"}];
+    return {drivers};
 });
 
 server.listen({port: 3333}, () => {
